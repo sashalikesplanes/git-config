@@ -1,0 +1,27 @@
+[credential]
+	credentialStore = keychain
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[core]
+  editor = nvim
+	excludesfile = /Users/sasha/.gitignore
+[user]
+	name = Sasha Kiselev
+	email = sdkiselev1812+github@gmail.com
+[init]
+	defaultBranch = master
+[pull]
+  rebase = false
+[push]
+	autoSetupRemote = true
+[alias]
+  ac = "!f(){ git add . && git commit -m \"$1\"; };f"
+  asc = "!f(){ git add \"$1\" && git commit -m \"$2\"; };f"
+  acp = "!f(){ git add . && git commit -m \"$1\"; git push; };f"
+  ascp = "!f(){ git add \"$1\" && git commit -m \"$2\"; git push; };f"
+  st = "status"
+
+[includeIf "gitdir:~/Appjection/"]
+  path = .gitconfig-appjection
+[credential "https://dev.azure.com"]
+	useHttpPath = true
